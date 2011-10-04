@@ -8,11 +8,13 @@
 ;;;; Vars
 
 (def #^{:doc "Bound to an implementation of RedisConnectionPool"}
+     ^:dynamic
      *pool*
      (make-connection-pool :lifo false
                            :test-on-borrow true))
 
 (def #^{:doc "Bound to an implementation of RedisChannel"}
+     ^:dynamic
      *channel* nil)
 
 ;;;; Macros
