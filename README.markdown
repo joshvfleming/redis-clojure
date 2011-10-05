@@ -1,6 +1,6 @@
 # redis-clojure
 
-This is work in progress for a new version of redis-clojure targeting Clojure 1.2.
+This is work in progress for a new version of redis-clojure targeting Clojure 1.3.
 
 New/fixed in this version is:
 
