@@ -1,8 +1,8 @@
-redis-clojure.jar
-classes
-lib
+redis-clojure*.jar
 \#*
 .\#*
-build.properties
 target
+lib
+classes
 pom.xml
+.lein-failures
