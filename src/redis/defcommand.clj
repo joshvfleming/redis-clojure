@@ -29,12 +29,14 @@
                         (map #(when (not (nil? %1))
                                 (%1 %2)) key-fns args)))))
 
-(def *default-opts* {:type        :multi-bulk
+(def ^:dynamic
+     *default-opts* {:type        :multi-bulk
                      :reply-fn    identity
                      :key-fn      get-key-fns
                      :redis-shard :one})
 
-(def *command-types* {:inline make-inline-command
+(def ^:dynamic
+     *command-types* {:inline make-inline-command
                       :multi-bulk make-multi-bulk-command})
 
 
