@@ -277,7 +277,12 @@
   (is (= "three" (cmd/rpop "list")))
   (is (= 2 (cmd/llen "list"))))
 
-(deftest blpop)
+; TODO test to see if this waits properly
+(deftest blpop
+  (is (thrown? Exception (cmd/blpop "foo" 1)))
+  (is (= nil (cmd/blpop "newlist" 1)))
+  (is (= ["list" "one"] (cmd/blpop "list" 1)))
+  (is (= 2 (cmd/llen "list"))))
 
 (deftest brpop)
 
